@@ -1,5 +1,3 @@
-import error from "next/error";
-import { handler } from "tailwindcss-animate";
 import { z } from "zod";
 
 export type FieldErrors<T> = {
@@ -21,13 +19,11 @@ export const createSafeAction = <TInput, TOutput>(
 
         if (!validationResult.success) {
             return {
-                fieldErrors: validationResult.error.flatten().fieldErrors as FieldErrors<TInput>
+                fieldErrors: validationResult.error.flatten().fieldErrors as FieldErrors<TInput>,
             }
         }
 
         return handler(validationResult.data)
     }
-
-
-
 }
+
