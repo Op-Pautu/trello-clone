@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { CreditCard } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+
 export function Info() {
   const { organization, isLoaded } = useOrganization();
 
