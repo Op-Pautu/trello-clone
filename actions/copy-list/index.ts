@@ -36,7 +36,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         })
 
         if (!listToCopy) {
-            return { error: 'List not found' }
+            return { error: "List not found" }
         }
 
         const lastList = await db.list.findFirst({
@@ -66,6 +66,8 @@ const handler = async (data: InputType): Promise<ReturnType> => {
                 cards: true
             }
         })
+
+
     } catch (error) {
         return {
             error: "Failed to copy."
