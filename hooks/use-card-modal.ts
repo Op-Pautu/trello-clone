@@ -13,5 +13,3 @@ export const useCardModal = create<CardModalStore>((set) => ({
     onOpen: (id: string) => set({ isOpen: true, id }),
     onClose: () => set({ isOpen: false, id: undefined }),
 }))
-
-
